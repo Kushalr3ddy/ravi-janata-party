@@ -1,11 +1,16 @@
 (function () {
   // ---- Config: replace these ----
   var FORM_ENDPOINT = "";            // e.g. "https://formspree.io/f/xxxxxxx"
-  var VIDEO_ID = "JQtcncVur8g";      // YouTube video id for the video section
   // -------------------------------
 
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   var lang = "en";
+  // Languages other than English/Kannada use Google Website Translator (machine translation of our English text)
+  var GT = [["hi","हिन्दी (Hindi)"],["ta","தமிழ் (Tamil)"],["te","తెలుగు (Telugu)"],["ml","മലയാളം (Malayalam)"],["mr","मराठी (Marathi)"],["bn","বাংলা (Bengali)"],["gu","ગુજરાતી (Gujarati)"],["pa","ਪੰਜਾਬੀ (Punjabi)"],["or","ଓଡ଼ିଆ (Odia)"],["as","অসমীয়া (Assamese)"],["ur","اردو (Urdu)"],["ne","नेपाली (Nepali)"],["sa","संस्कृतम् (Sanskrit)"],["gom","कोंकणी (Konkani)"],["mai","मैथिली (Maithili)"],["doi","डोगरी (Dogri)"],["sd","سنڌي (Sindhi)"],["brx","बड़ो (Bodo)"],["sat","ᱥᱟᱱᱛᱟᱲᱤ (Santali)"],["mni-Mtei","ꯃꯩꯇꯩꯂꯣꯟ (Meiteilon)"],["ks","کٲشُر (Kashmiri)"]];
+  function gtCode() { var m = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([^;]+)/); return m ? decodeURIComponent(m[1]) : ""; }
+  function gtSet(code) { var v = "/en/" + code, h = location.hostname; document.cookie = "googtrans=" + v + ";path=/"; if (h.indexOf(".") > 0) document.cookie = "googtrans=" + v + ";path=/;domain=" + h; }
+  function gtClear() { var h = location.hostname, past = "expires=Thu, 01 Jan 1970 00:00:00 GMT"; document.cookie = "googtrans=;path=/;" + past; document.cookie = "googtrans=;path=/;domain=" + h + ";" + past; }
+  var gt = gtCode();
   var t = function (k) { return (window.I18N[lang] && window.I18N[lang][k]) || window.I18N.en[k] || k; };
   var esc = function (s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
 
@@ -27,14 +32,19 @@
 
   function apply() {
     document.documentElement.lang = lang;
-    document.title = t("doc.title");
+    document.title = t(document.body.dataset.title || "doc.title");
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var v = t(el.dataset.i18n);
-      if (el.hasAttribute("data-rich")) el.innerHTML = rich(v, el.hasAttribute("data-split"));
+      if (el.hasAttribute("data-rich")) el.innerHTML = rich(v, el.hasAttribute("data-split") && !gt);
       else el.textContent = v;
     });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) { el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
-    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    var sel = document.getElementById("lang-select");
+    if (sel) {
+      var og = document.getElementById("lang-ours"), oa = document.getElementById("lang-auto");
+      if (og) og.label = t("lang.ours"); if (oa) oa.label = t("lang.auto");
+      sel.value = gt || lang;
+    }
     lightWords();
   }
   function setLang(l) {
@@ -55,10 +65,34 @@
   }
 
   try { var saved = localStorage.getItem("rjp-lang"); if (saved === "kn" || saved === "en") lang = saved; } catch (e) {}
-  document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.dataset.lang); });
-  });
+  if (gt) lang = "en"; // Google translates our English text
+  (function buildLangMenu() {
+    var sel = document.getElementById("lang-select");
+    if (!sel) return;
+    var og = document.getElementById("lang-ours"), oa = document.getElementById("lang-auto");
+    og.innerHTML = '<option value="en">English</option><option value="kn">ಕನ್ನಡ</option>';
+    oa.innerHTML = GT.map(function (c) { return '<option value="' + c[0] + '">' + c[1] + "</option>"; }).join("");
+    sel.addEventListener("change", function () {
+      var v = sel.value;
+      if (v === "en" || v === "kn") {
+        var had = !!gtCode();
+        gtClear(); setLang(v);
+        if (had) location.reload();
+      } else {
+        try { localStorage.setItem("rjp-lang", "en"); } catch (e) {}
+        gtSet(v); location.reload();
+      }
+    });
+  })();
   apply();
+  if (gt) {
+    window.gtInit = function () {
+      new google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: GT.map(function (c) { return c[0]; }).join(","), autoDisplay: false }, "gt-el");
+    };
+    var gs = document.createElement("script");
+    gs.src = "https://translate.google.com/translate_a/element.js?cb=gtInit";
+    document.head.appendChild(gs);
+  }
 
   // Ashoka-chakra spokes
   function spokes(id, r1, r2) {
@@ -94,11 +128,13 @@
 
   // mobile menu
   var menuBtn = document.getElementById("menu-btn"), links = document.getElementById("links");
-  menuBtn.addEventListener("click", function () {
-    var open = links.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", String(open));
-  });
-  links.addEventListener("click", function () { links.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
+  if (menuBtn && links) {
+    menuBtn.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+    links.addEventListener("click", function () { links.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
+  }
 
   // flag panel: background goes orange -> white -> green as you scroll through it
   var pin = document.getElementById("vision");
@@ -113,8 +149,8 @@
   var hdr = document.getElementById("hdr"), bar = document.getElementById("progress");
   function onScroll() {
     var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
-    bar.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
-    hdr.classList.toggle("solid", h.scrollTop > 40);
+    if (bar) bar.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
+    if (hdr) hdr.classList.toggle("solid", h.scrollTop > 40);
     pinProgress();
     lightWords();
   }
@@ -122,9 +158,22 @@
   window.addEventListener("resize", lightWords);
   onScroll();
 
+
+  // flag video: keep it still (poster only) for reduced motion or Data Saver
+  (function () {
+    var vids = document.querySelectorAll(".bg-video");
+    var saver = navigator.connection && navigator.connection.saveData;
+    if (!vids.length || !(reduce || saver)) return;
+    vids.forEach(function (v) {
+      v.pause(); v.removeAttribute("autoplay");
+      v.querySelectorAll("source").forEach(function (src) { src.remove(); });
+      v.load();
+    });
+  })();
+
   // hero glow follows the cursor
   var hero = document.getElementById("hero");
-  hero.addEventListener("pointermove", function (e) {
+  if (hero) hero.addEventListener("pointermove", function (e) {
     var r = hero.getBoundingClientRect();
     hero.style.setProperty("--mx", (e.clientX - r.left) + "px");
     hero.style.setProperty("--my", (e.clientY - r.top) + "px");
@@ -179,23 +228,10 @@
     document.querySelectorAll("[data-count]").forEach(function (n) { n.textContent = n.dataset.count; });
   }
 
-  // video facade (loads YouTube only after click)
-  var vb = document.getElementById("video-btn");
-  vb.style.backgroundImage = "url(https://i.ytimg.com/vi/" + VIDEO_ID + "/hqdefault.jpg)";
-  vb.addEventListener("click", function () {
-    var f = document.createElement("iframe");
-    f.src = "https://www.youtube-nocookie.com/embed/" + VIDEO_ID + "?autoplay=1&rel=0";
-    f.title = "Video";
-    f.allow = "accelerometer; autoplay; encrypted-media; picture-in-picture";
-    f.allowFullscreen = true;
-    vb.replaceWith(f);
-  });
-  document.getElementById("video-link").href = "https://youtu.be/" + VIDEO_ID;
-
   // join form
   var form = document.getElementById("join-form"), msg = document.getElementById("form-msg");
   function show(key, cls) { msg.className = cls; msg.dataset.i18n = key; msg.textContent = t(key); }
-  form.addEventListener("submit", function (e) {
+  if (form && msg) form.addEventListener("submit", function (e) {
     e.preventDefault();
     var d = new FormData(form);
     if (d.get("website")) return; // honeypot

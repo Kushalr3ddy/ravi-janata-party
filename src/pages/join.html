@@ -1,0 +1,71 @@
+title: Join us | Ravi Janatha Party
+desc: Join Ravi Janatha Party: volunteer, become a member, spread the word or contest elections.
+titlekey: doc.title.join
+---
+<section class="page-hero">
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/flag-poster.jpg" aria-hidden="true" tabindex="-1"><source src="assets/video/flag-loop.mp4" type="video/mp4"></video>
+  <svg class="chakra" viewBox="-100 -100 200 200" aria-hidden="true">
+      <circle class="disc" r="92"/>
+      <circle r="92" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <circle r="14" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <g stroke="currentColor" stroke-width="2.6" stroke-linecap="round" id="spokes"></g>
+    </svg>
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><span data-i18n="join.eyebrow"></span></p>
+    <h1 class="display" data-rich data-i18n="join.page.title"></h1>
+    <p class="lead" data-i18n="join.lead"></p>
+  </div>
+</section>
+
+<section class="band white">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label"><span class="line"></span><span data-i18n="ways.eyebrow"></span></div>
+      <h2 class="display" data-rich data-i18n="ways.title"></h2>
+    </div>
+    <div class="cards4"><article class="vcard reveal"><span class="vnum">01</span><h3 data-i18n="f.i1"></h3><p data-i18n="way1.d"></p></article><article class="vcard reveal"><span class="vnum">02</span><h3 data-i18n="f.i2"></h3><p data-i18n="way2.d"></p></article><article class="vcard reveal"><span class="vnum">03</span><h3 data-i18n="f.i3"></h3><p data-i18n="way3.d"></p></article><article class="vcard reveal"><span class="vnum">04</span><h3 data-i18n="f.i4"></h3><p data-i18n="way4.d"></p></article></div>
+  </div>
+</section>
+
+<section class="band mint1" id="academy">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <div class="label"><span class="line"></span><span data-i18n="academy.eyebrow"></span></div>
+      <h2 class="display" data-rich data-i18n="academy.title"></h2>
+      <p class="lead" data-i18n="academy.text"></p>
+    </div>
+    <div class="reveal">
+      <ul class="facts big"><li data-i18n="fa14.b1"></li><li data-i18n="fa14.b2"></li><li data-i18n="fa14.b3"></li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="band green3" id="join">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label"><span class="line"></span><span data-i18n="join.eyebrow">Join us</span></div>
+      <h2 class="display" data-rich data-i18n="join.title"></h2>
+    </div>
+    <form id="join-form" class="reveal" novalidate>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label><span data-i18n="f.name">Full name</span><input name="name" required autocomplete="name"></label>
+      <div class="two">
+        <label><span data-i18n="f.phone">Phone number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel"></label>
+        <label><span data-i18n="f.email">Email</span><input name="email" type="email" inputmode="email" autocomplete="email"></label>
+      </div>
+      <label><span data-i18n="f.place">Town / constituency</span><input name="place"></label>
+      <label><span data-i18n="f.interest">How do you want to help?</span>
+        <select name="interest">
+          <option value="volunteer" data-i18n="f.i1">Volunteer</option>
+          <option value="member" data-i18n="f.i2">Become a member</option>
+          <option value="spread" data-i18n="f.i3">Spread the word</option>
+          <option value="candidate" data-i18n="f.i4">Contest elections</option>
+          <option value="academy" data-i18n="f.i5">Join the leadership academy</option>
+        </select>
+      </label>
+      <button class="btn white" type="submit"><span data-i18n="f.submit">Join RJP</span><i>→</i></button>
+      <div id="form-msg" role="status" aria-live="polite"></div>
+      <p class="fine" data-i18n="join.privacy"></p>
+    </form>
+  </div>
+</section>

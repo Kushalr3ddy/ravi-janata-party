@@ -15,8 +15,10 @@ presented as such. Resized to 1400px wide.
 | biz-techpark.jpg | https://www.pexels.com/photo/modern-office-buildings-in-hyderabad-tech-park-36926207/ |
 | biz-factory.jpg | https://www.pexels.com/photo/industrial-machinery-in-a-factory-18920790/ |
 | biz-welder.jpg | https://www.pexels.com/photo/man-welds-the-casing-of-the-machine-16005625/ |
-| growth-metro-hyd.jpg | https://www.pexels.com/photo/metro-train-in-city-5323956/ |
 | rights-farmer.jpg | https://www.pexels.com/photo/indian-female-farmer-working-in-field-at-sunset-35635150/ |
 | corruption-handcuffs.jpg | https://www.pexels.com/photo/silver-handcuffs-on-top-of-bundled-paper-money-6266771/ |
 | corruption-rupees.jpg | https://www.pexels.com/photo/indian-rupees-in-hands-symbolizing-wealth-33813215/ |
-| visvesvaraya.jpg | https://commons.wikimedia.org/wiki/File:Vishveshvarayya_in_his_30%27s.jpg (public domain, c. 1890, unknown author) |
+| visvesvaraya.jpg | From https://kushalr3ddy.github.io/geefit/assets/brand/visvesvaraya.jpg (supplied by the project owner, who has confirmed the rights to use this portrait) |
+| health-doctor.jpg | https://www.pexels.com/photo/photo-of-a-doctor-standing-with-her-arms-crossed-5738735/ (cropped to remove a third-party hospital logo) |
+| women-tailor.jpg | https://www.pexels.com/photo/indian-woman-sewing-dress-on-sewing-machine-3869086/ |
+| green-forest.jpg | https://www.pexels.com/photo/a-path-through-a-forest-with-tall-trees-27793589/ |
