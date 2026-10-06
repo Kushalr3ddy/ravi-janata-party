@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravi Janata Party (RJP) | New Generation Party</title>
-  <meta name="description" content="Ravi Janata Party: a new generation party fighting for people's rights and justice, and for urgent political change in India.">
+  <title>Ravi Janata Party (RJP) | New India. New Generation.</title>
+  <meta name="description" content="Ravi Janata Party: a new generation party for a corruption-free India, youth and business support, and a growing nation.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Kannada:wght@400;600;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
+<div id="progress" aria-hidden="true"></div>
+<header id="hdr">
   <div class="wrap nav">
     <a class="brand" href="#top"><img src="assets/logo.svg" alt=""><span data-i18n="brand">Ravi Janata Party</span></a>
     <nav class="links" id="links">
       <a href="#why" data-i18n="nav.why">Why RJP</a>
-      <a href="#vision" data-i18n="nav.vision">Vision</a>
+      <a href="#pillars" data-i18n="nav.pillars">Pillars</a>
+      <a href="#compare" data-i18n="nav.compare">RJP vs Old Politics</a>
       <a href="#leaders" data-i18n="nav.leaders">Leadership</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -30,35 +32,103 @@
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="wrap reveal">
-      <div class="eyebrow" data-i18n="hero.eyebrow">New generation party</div>
-      <h1><span data-i18n="hero.title1">India needs</span><br><span class="gold" data-i18n="hero.title2">urgent political change.</span></h1>
-      <p class="lead" data-i18n="hero.lead">Ravi Janata Party stands for people's rights, justice and a country where young people can build their future at home.</p>
+  <section class="hero" id="hero">
+    <svg class="chakra" viewBox="-100 -100 200 200" aria-hidden="true">
+      <circle r="92" fill="none" stroke="currentColor" stroke-width="3"/>
+      <circle r="14" fill="none" stroke="currentColor" stroke-width="3"/>
+      <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round" id="spokes"></g>
+    </svg>
+    <div class="orb o1"></div><div class="orb o2"></div>
+    <div class="wrap hero-in">
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">New generation party</span></div>
+      <h1 class="mega"><span class="l1" data-i18n="hero.title1">New India.</span><span class="l2 gold-grad" data-i18n="hero.title2">New Generation.</span></h1>
+      <p class="lead" data-i18n="hero.lead">India does not need more excuses.</p>
       <div class="cta-row">
         <a class="btn" href="#join" data-i18n="hero.cta1">Join the movement</a>
-        <a class="btn ghost" href="#why" data-i18n="hero.cta2">Why RJP?</a>
+        <a class="btn ghost" href="#pledges" data-i18n="hero.cta2">See our pledges</a>
       </div>
     </div>
     <div class="tri"><i></i><i></i><i></i></div>
   </section>
 
-  <div class="problem">
-    <div class="wrap reveal"><p data-i18n="problem.text">It is very difficult to work in India. That is why so many people open their businesses in foreign countries.</p></div>
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span data-i18n="tick1">Zero corruption</span><b>★</b><span data-i18n="tick2">Youth first</span><b>★</b><span data-i18n="tick3">Business friendly</span><b>★</b><span data-i18n="tick4">Rising India</span><b>★</b><span data-i18n="tick5">Rights and justice</span><b>★</b>
+      <span data-i18n="tick1">Zero corruption</span><b>★</b><span data-i18n="tick2">Youth first</span><b>★</b><span data-i18n="tick3">Business friendly</span><b>★</b><span data-i18n="tick4">Rising India</span><b>★</b><span data-i18n="tick5">Rights and justice</span><b>★</b>
+    </div>
   </div>
 
-  <section id="why">
+  <section class="stats">
+    <div class="wrap statgrid">
+      <div class="stat reveal"><b data-count="5">0</b><span data-i18n="stat1">Core pillars</span></div>
+      <div class="stat reveal"><b data-count="100">0</b><span data-i18n="stat2">Day action plan</span></div>
+      <div class="stat reveal"><b data-count="0">0</b><span data-i18n="stat3">Tolerance for corruption</span></div>
+      <div class="stat reveal"><b data-count="1">0</b><span data-i18n="stat4">Nation. One future.</span></div>
+    </div>
+  </section>
+
+  <section class="problem" id="why">
+    <div class="wrap reveal">
+      <div class="eyebrow" data-i18n="problem.eyebrow">The truth</div>
+      <p class="big" data-i18n="problem.text">It is very difficult to work in India.</p>
+      <p class="sub" data-i18n="problem.sub">We think that is a failure of politics, not of people.</p>
+    </div>
+  </section>
+
+  <section id="pillars">
     <div class="wrap">
       <div class="reveal">
-        <div class="eyebrow" data-i18n="why.eyebrow">Why RJP?</div>
-        <h2 data-i18n="why.title">Because the people deserve better.</h2>
-        <p class="lead" data-i18n="why.lead">We are a new generation party. We want a system that works for the people who live under it.</p>
+        <div class="eyebrow" data-i18n="pillars.eyebrow">Five pillars</div>
+        <h2 data-i18n="pillars.title">What we will fight for.</h2>
+        <p class="lead" data-i18n="pillars.lead">Five promises.</p>
       </div>
-      <div class="grid">
-        <article class="card reveal"><div class="ico" aria-hidden="true">⚖️</div><h3 data-i18n="p1.title">Anti-corruption</h3><p data-i18n="p1.text">Anti-corruption measures must be implemented very soon, not someday.</p></article>
-        <article class="card reveal"><div class="ico" aria-hidden="true">✊</div><h3 data-i18n="p2.title">Rights and justice</h3><p data-i18n="p2.text">We fight for people's rights and for justice that reaches everyone.</p></article>
-        <article class="card reveal"><div class="ico" aria-hidden="true">🚀</div><h3 data-i18n="p3.title">Opportunity at home</h3><p data-i18n="p3.text">A country where you do not have to leave to build a business or a career.</p></article>
+      <div class="pgrid">
+        <article class="pcard reveal"><span class="num">01</span><div class="ico" aria-hidden="true">⚖️</div><h3 data-i18n="c1.title">Corruption-free India</h3><p data-i18n="c1.text"></p></article>
+        <article class="pcard reveal"><span class="num">02</span><div class="ico" aria-hidden="true">🎓</div><h3 data-i18n="c2.title">Youth first</h3><p data-i18n="c2.text"></p></article>
+        <article class="pcard reveal"><span class="num">03</span><div class="ico" aria-hidden="true">🏭</div><h3 data-i18n="c3.title">Business and startups</h3><p data-i18n="c3.text"></p></article>
+        <article class="pcard reveal"><span class="num">04</span><div class="ico" aria-hidden="true">🇮🇳</div><h3 data-i18n="c4.title">Grow the nation</h3><p data-i18n="c4.text"></p></article>
+        <article class="pcard reveal"><span class="num">05</span><div class="ico" aria-hidden="true">✊</div><h3 data-i18n="c5.title">Rights and justice</h3><p data-i18n="c5.text"></p></article>
       </div>
+    </div>
+  </section>
+
+  <section class="alt" id="compare">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow" data-i18n="cmp.eyebrow">RJP vs old politics</div>
+        <h2 data-i18n="cmp.title">The difference is the point.</h2>
+      </div>
+      <div class="cmp">
+        <div class="cmp-h reveal"><span class="x" data-i18n="cmp.old">Old politics</span><span class="v" data-i18n="cmp.new">RJP</span></div>
+        <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o1"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n1"></span></p></div>
+        <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o2"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n2"></span></p></div>
+        <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o3"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n3"></span></p></div>
+        <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o4"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n4"></span></p></div>
+        <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o5"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n5"></span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pledges">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow" data-i18n="pledge.eyebrow">Our first 100 days</div>
+        <h2 data-i18n="pledge.title">Promises we will be judged on.</h2>
+      </div>
+      <ol class="pledges">
+        <li class="reveal"><span data-i18n="pl1"></span></li>
+        <li class="reveal"><span data-i18n="pl2"></span></li>
+        <li class="reveal"><span data-i18n="pl3"></span></li>
+        <li class="reveal"><span data-i18n="pl4"></span></li>
+      </ol>
+      <p class="caption" data-i18n="pledge.note">Draft pledges. The full manifesto will be published soon.</p>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap reveal">
+      <blockquote data-i18n="quote.text">Our country is not a place to leave. It is a place to build.</blockquote>
+      <div class="tag" data-i18n="quote.tag">Jai Hind</div>
     </div>
   </section>
 
@@ -67,24 +137,16 @@
       <div class="reveal">
         <div class="eyebrow" data-i18n="video.eyebrow">Watch</div>
         <h2 data-i18n="video.title">Why people want change</h2>
-        <p class="lead" data-i18n="video.text">A video that shows the frustration many people feel with politics today.</p>
+        <p class="lead" data-i18n="video.text"></p>
       </div>
       <div class="reveal">
         <div class="video"><button id="video-btn" type="button" data-i18n-aria="video.play" aria-label="Play video"></button></div>
-        <p class="caption"><span data-i18n="video.credit">Video by Troll Patrike on YouTube. It is third-party content and does not necessarily reflect the views of RJP.</span> <a id="video-link" href="#" target="_blank" rel="noopener" data-i18n="video.watch">Watch on YouTube</a></p>
+        <p class="caption"><span data-i18n="video.credit"></span> <a id="video-link" href="#" target="_blank" rel="noopener" data-i18n="video.watch">Watch on YouTube</a></p>
       </div>
     </div>
   </section>
 
-  <section id="vision">
-    <div class="wrap reveal">
-      <div class="eyebrow" data-i18n="vision.eyebrow">Our vision</div>
-      <h2 data-i18n="vision.title">A new generation, a new politics.</h2>
-      <p class="lead" data-i18n="vision.text">RJP is built by and for a new generation that is tired of waiting. We will publish our full manifesto soon. Join us to help shape it.</p>
-    </div>
-  </section>
-
-  <section class="alt" id="leaders">
+  <section id="leaders">
     <div class="wrap">
       <div class="reveal">
         <div class="eyebrow" data-i18n="leaders.eyebrow">Leadership</div>
@@ -98,12 +160,12 @@
     </div>
   </section>
 
-  <section id="join">
+  <section class="alt" id="join">
     <div class="wrap">
       <div class="reveal">
         <div class="eyebrow" data-i18n="join.eyebrow">Join us</div>
-        <h2 data-i18n="join.title">Be part of the change.</h2>
-        <p class="lead" data-i18n="join.lead">Tell us who you are. We will contact you about volunteering and membership.</p>
+        <h2 data-i18n="join.title">India is waiting. Be part of the change.</h2>
+        <p class="lead" data-i18n="join.lead"></p>
       </div>
       <form id="join-form" class="reveal" novalidate style="margin-top:28px">
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
