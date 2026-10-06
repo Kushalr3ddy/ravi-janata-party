@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Kannada:wght@400;600;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;600;800&family=Noto+Serif+Kannada:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,80 +26,96 @@
       <button data-lang="en" aria-pressed="true">EN</button>
       <button data-lang="kn" aria-pressed="false">ಕನ್ನಡ</button>
     </div>
-    <a class="btn sm join-top" href="#join" data-i18n="nav.join">Join us</a>
+    <a class="btn sm join-top" href="#join"><span data-i18n="nav.join">Join us</span><i>→</i></a>
     <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="links">☰</button>
   </div>
 </header>
 
 <main id="top">
   <section class="hero" id="hero">
-    <svg class="chakra" viewBox="-100 -100 200 200" aria-hidden="true">
-      <circle r="92" fill="none" stroke="currentColor" stroke-width="3"/>
-      <circle r="14" fill="none" stroke="currentColor" stroke-width="3"/>
-      <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round" id="spokes"></g>
-    </svg>
-    <div class="orb o1"></div><div class="orb o2"></div>
+    <div class="hero-art" aria-hidden="true">
+      <svg class="chakra" viewBox="-100 -100 200 200">
+        <circle r="92" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <g stroke="currentColor" stroke-width="1.2" stroke-linecap="round" id="spokes"></g>
+      </svg>
+      <div class="glow g1"></div><div class="glow g2"></div>
+    </div>
     <div class="wrap hero-in">
-      <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">New generation party</span></div>
-      <h1 class="mega"><span class="l1" data-i18n="hero.title1">New India.</span><span class="l2 gold-grad" data-i18n="hero.title2">New Generation.</span></h1>
-      <p class="lead" data-i18n="hero.lead">India does not need more excuses.</p>
-      <div class="cta-row">
-        <a class="btn" href="#join" data-i18n="hero.cta1">Join the movement</a>
-        <a class="btn ghost" href="#pledges" data-i18n="hero.cta2">See our pledges</a>
+      <div class="label rise r0"><span class="line"></span><span data-i18n="hero.eyebrow">New generation party</span></div>
+      <h1 class="mega"><span class="rise r1" data-i18n="hero.title1">New India.</span><span class="rise r2 acc" data-rich data-i18n="hero.title2">*New Generation.*</span></h1>
+      <span class="script rise r3" data-i18n="hero.note">join the movement!</span>
+      <p class="lead rise r3" data-i18n="hero.lead"></p>
+      <div class="cta-row rise r4">
+        <a class="btn" href="#join"><span data-i18n="hero.cta1">Join the movement</span><i>→</i></a>
+        <a class="btn ghost" href="#pledges"><span data-i18n="hero.cta2">See our pledges</span><i>→</i></a>
       </div>
     </div>
-    <div class="tri"><i></i><i></i><i></i></div>
+    <div class="scroll-cue" aria-hidden="true"><span data-i18n="scroll">Scroll</span><i></i></div>
   </section>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="track">
-      <span data-i18n="tick1">Zero corruption</span><b>★</b><span data-i18n="tick2">Youth first</span><b>★</b><span data-i18n="tick3">Business friendly</span><b>★</b><span data-i18n="tick4">Rising India</span><b>★</b><span data-i18n="tick5">Rights and justice</span><b>★</b>
-      <span data-i18n="tick1">Zero corruption</span><b>★</b><span data-i18n="tick2">Youth first</span><b>★</b><span data-i18n="tick3">Business friendly</span><b>★</b><span data-i18n="tick4">Rising India</span><b>★</b><span data-i18n="tick5">Rights and justice</span><b>★</b>
+  <div class="notice">
+    <div class="wrap notice-in">
+      <div class="notice-label" data-i18n="nb.label">Notice board</div>
+      <a href="#pillars"><small data-i18n="nb1.k">Pillars</small><span data-i18n="nb1.v"></span><i>→</i></a>
+      <a href="#pledges"><small data-i18n="nb2.k">100 days</small><span data-i18n="nb2.v"></span><i>→</i></a>
+      <a href="#join"><small data-i18n="nb3.k">Manifesto</small><span data-i18n="nb3.v"></span><i>→</i></a>
     </div>
   </div>
 
-  <section class="stats">
-    <div class="wrap statgrid">
-      <div class="stat reveal"><b data-count="5">0</b><span data-i18n="stat1">Core pillars</span></div>
-      <div class="stat reveal"><b data-count="100">0</b><span data-i18n="stat2">Day action plan</span></div>
-      <div class="stat reveal"><b data-count="0">0</b><span data-i18n="stat3">Tolerance for corruption</span></div>
-      <div class="stat reveal"><b data-count="1">0</b><span data-i18n="stat4">Nation. One future.</span></div>
-    </div>
-  </section>
-
-  <section class="problem" id="why">
-    <div class="wrap reveal">
-      <div class="eyebrow" data-i18n="problem.eyebrow">The truth</div>
-      <p class="big" data-i18n="problem.text">It is very difficult to work in India.</p>
-      <p class="sub" data-i18n="problem.sub">We think that is a failure of politics, not of people.</p>
-    </div>
-  </section>
-
-  <section id="pillars">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="eyebrow" data-i18n="pillars.eyebrow">Five pillars</div>
-        <h2 data-i18n="pillars.title">What we will fight for.</h2>
-        <p class="lead" data-i18n="pillars.lead">Five promises.</p>
-      </div>
-      <div class="pgrid">
-        <article class="pcard reveal"><span class="num">01</span><div class="ico" aria-hidden="true">⚖️</div><h3 data-i18n="c1.title">Corruption-free India</h3><p data-i18n="c1.text"></p></article>
-        <article class="pcard reveal"><span class="num">02</span><div class="ico" aria-hidden="true">🎓</div><h3 data-i18n="c2.title">Youth first</h3><p data-i18n="c2.text"></p></article>
-        <article class="pcard reveal"><span class="num">03</span><div class="ico" aria-hidden="true">🏭</div><h3 data-i18n="c3.title">Business and startups</h3><p data-i18n="c3.text"></p></article>
-        <article class="pcard reveal"><span class="num">04</span><div class="ico" aria-hidden="true">🇮🇳</div><h3 data-i18n="c4.title">Grow the nation</h3><p data-i18n="c4.text"></p></article>
-        <article class="pcard reveal"><span class="num">05</span><div class="ico" aria-hidden="true">✊</div><h3 data-i18n="c5.title">Rights and justice</h3><p data-i18n="c5.text"></p></article>
+  <section class="band ivory" id="why">
+    <div class="wrap narrow center">
+      <div class="label dark"><span class="line"></span><span data-i18n="problem.eyebrow">The truth</span><span class="line"></span></div>
+      <p class="statement" data-split data-rich data-i18n="problem.text"></p>
+      <p class="sub" data-i18n="problem.sub"></p>
+      <div class="counters">
+        <div><b data-count="5">0</b><span data-i18n="stat1">Core pillars</span></div>
+        <div><b data-count="100">0</b><span data-i18n="stat2">Day action plan</span></div>
+        <div><b data-count="0">0</b><span data-i18n="stat3">Tolerance for corruption</span></div>
+        <div><b data-count="1">0</b><span data-i18n="stat4">Nation. One future.</span></div>
       </div>
     </div>
   </section>
 
-  <section class="alt" id="compare">
+  <section class="pin" id="vision">
+    <div class="pin-art" aria-hidden="true">
+      <svg class="chakra big" viewBox="-100 -100 200 200"><circle r="92" fill="none" stroke="currentColor" stroke-width="1"/><g stroke="currentColor" stroke-width=".8" id="spokes2"></g></svg>
+      <div class="stripe"><i></i><i></i><i></i></div>
+    </div>
+    <div class="pin-card reveal">
+      <div class="label dark"><span class="line"></span><span data-i18n="quote.eyebrow">A new chapter begins</span></div>
+      <blockquote data-rich data-i18n="quote.text"></blockquote>
+      <div class="tag" data-i18n="quote.tag">Jai Hind</div>
+      <a class="btn navy" href="#join"><span data-i18n="hero.cta1">Join the movement</span><i>→</i></a>
+    </div>
+  </section>
+
+  <section class="band dark" id="pillars">
     <div class="wrap">
       <div class="reveal">
-        <div class="eyebrow" data-i18n="cmp.eyebrow">RJP vs old politics</div>
-        <h2 data-i18n="cmp.title">The difference is the point.</h2>
+        <div class="label"><span class="line"></span><span data-i18n="pillars.eyebrow">Five pillars</span></div>
+        <h2 class="display" data-rich data-i18n="pillars.title"></h2>
+        <span class="script" data-i18n="pill.sub">all for one nation</span>
+        <p class="lead" data-i18n="pillars.lead"></p>
+      </div>
+      <div class="tiles">
+        <article class="tile reveal"><div class="tile-art a1"><span aria-hidden="true">⚖️</span></div><div class="tile-k">01 / 05</div><h3 data-i18n="c1.title"></h3><p data-i18n="c1.text"></p></article>
+        <article class="tile reveal"><div class="tile-art a2"><span aria-hidden="true">🎓</span></div><div class="tile-k">02 / 05</div><h3 data-i18n="c2.title"></h3><p data-i18n="c2.text"></p></article>
+        <article class="tile reveal"><div class="tile-art a3"><span aria-hidden="true">🏭</span></div><div class="tile-k">03 / 05</div><h3 data-i18n="c3.title"></h3><p data-i18n="c3.text"></p></article>
+        <article class="tile reveal"><div class="tile-art a4"><span aria-hidden="true">🇮🇳</span></div><div class="tile-k">04 / 05</div><h3 data-i18n="c4.title"></h3><p data-i18n="c4.text"></p></article>
+        <article class="tile reveal"><div class="tile-art a5"><span aria-hidden="true">✊</span></div><div class="tile-k">05 / 05</div><h3 data-i18n="c5.title"></h3><p data-i18n="c5.text"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band ivory" id="compare">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="label dark"><span class="line"></span><span data-i18n="cmp.eyebrow">RJP vs old politics</span></div>
+        <h2 class="display ink" data-rich data-i18n="cmp.title"></h2>
       </div>
       <div class="cmp">
-        <div class="cmp-h reveal"><span class="x" data-i18n="cmp.old">Old politics</span><span class="v" data-i18n="cmp.new">RJP</span></div>
+        <div class="cmp-h"><span class="x" data-i18n="cmp.old">Old politics</span><span class="v" data-i18n="cmp.new">RJP</span></div>
         <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o1"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n1"></span></p></div>
         <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o2"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n2"></span></p></div>
         <div class="cmp-r reveal"><p class="x"><i>✕</i><span data-i18n="cmp.o3"></span></p><p class="v"><i>✓</i><span data-i18n="cmp.n3"></span></p></div>
@@ -109,11 +125,11 @@
     </div>
   </section>
 
-  <section id="pledges">
+  <section class="band dark" id="pledges">
     <div class="wrap">
       <div class="reveal">
-        <div class="eyebrow" data-i18n="pledge.eyebrow">Our first 100 days</div>
-        <h2 data-i18n="pledge.title">Promises we will be judged on.</h2>
+        <div class="label"><span class="line"></span><span data-i18n="pledge.eyebrow">Our first 100 days</span></div>
+        <h2 class="display" data-rich data-i18n="pledge.title"></h2>
       </div>
       <ol class="pledges">
         <li class="reveal"><span data-i18n="pl1"></span></li>
@@ -121,53 +137,46 @@
         <li class="reveal"><span data-i18n="pl3"></span></li>
         <li class="reveal"><span data-i18n="pl4"></span></li>
       </ol>
-      <p class="caption" data-i18n="pledge.note">Draft pledges. The full manifesto will be published soon.</p>
+      <p class="fine" data-i18n="pledge.note"></p>
     </div>
   </section>
 
-  <section class="quote">
-    <div class="wrap reveal">
-      <blockquote data-i18n="quote.text">Our country is not a place to leave. It is a place to build.</blockquote>
-      <div class="tag" data-i18n="quote.tag">Jai Hind</div>
-    </div>
-  </section>
-
-  <section class="alt" id="video">
+  <section class="band deep" id="video">
     <div class="wrap video-grid">
       <div class="reveal">
-        <div class="eyebrow" data-i18n="video.eyebrow">Watch</div>
-        <h2 data-i18n="video.title">Why people want change</h2>
+        <div class="label"><span class="line"></span><span data-i18n="video.eyebrow">Watch</span></div>
+        <h2 class="display" data-rich data-i18n="video.title"></h2>
         <p class="lead" data-i18n="video.text"></p>
       </div>
       <div class="reveal">
         <div class="video"><button id="video-btn" type="button" data-i18n-aria="video.play" aria-label="Play video"></button></div>
-        <p class="caption"><span data-i18n="video.credit"></span> <a id="video-link" href="#" target="_blank" rel="noopener" data-i18n="video.watch">Watch on YouTube</a></p>
+        <p class="fine"><span data-i18n="video.credit"></span> <a id="video-link" href="#" target="_blank" rel="noopener" data-i18n="video.watch">Watch on YouTube</a></p>
       </div>
     </div>
   </section>
 
-  <section id="leaders">
+  <section class="band ivory" id="leaders">
     <div class="wrap">
       <div class="reveal">
-        <div class="eyebrow" data-i18n="leaders.eyebrow">Leadership</div>
-        <h2 data-i18n="leaders.title">The people behind RJP</h2>
+        <div class="label dark"><span class="line"></span><span data-i18n="leaders.eyebrow">Leadership</span></div>
+        <h2 class="display ink" data-rich data-i18n="leaders.title"></h2>
       </div>
-      <div class="grid">
-        <article class="card leader reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
-        <article class="card leader reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
-        <article class="card leader reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
+      <div class="people">
+        <article class="person reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
+        <article class="person reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
+        <article class="person reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
       </div>
     </div>
   </section>
 
-  <section class="alt" id="join">
+  <section class="band dark" id="join">
     <div class="wrap">
       <div class="reveal">
-        <div class="eyebrow" data-i18n="join.eyebrow">Join us</div>
-        <h2 data-i18n="join.title">India is waiting. Be part of the change.</h2>
+        <div class="label"><span class="line"></span><span data-i18n="join.eyebrow">Join us</span></div>
+        <h2 class="display" data-rich data-i18n="join.title"></h2>
         <p class="lead" data-i18n="join.lead"></p>
       </div>
-      <form id="join-form" class="reveal" novalidate style="margin-top:28px">
+      <form id="join-form" class="reveal" novalidate>
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label><span data-i18n="f.name">Full name</span><input name="name" required autocomplete="name"></label>
         <div class="two">
@@ -183,7 +192,7 @@
             <option value="candidate" data-i18n="f.i4">Contest elections</option>
           </select>
         </label>
-        <button class="btn red" type="submit" data-i18n="f.submit">Join RJP</button>
+        <button class="btn" type="submit"><span data-i18n="f.submit">Join RJP</span><i>→</i></button>
         <div id="form-msg" role="status" aria-live="polite"></div>
       </form>
     </div>
@@ -197,6 +206,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
