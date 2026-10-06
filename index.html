@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ff9933">
   <title>Ravi Janata Party (RJP) | New India. New Generation.</title>
   <meta name="description" content="Ravi Janata Party: a new generation party for a corruption-free India, youth and business support, and a growing nation.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
@@ -20,7 +21,7 @@
       <a href="#why" data-i18n="nav.why">Why RJP</a>
       <a href="#pillars" data-i18n="nav.pillars">Pillars</a>
       <a href="#compare" data-i18n="nav.compare">RJP vs Old Politics</a>
-      <a href="#leaders" data-i18n="nav.leaders">Leadership</a>
+      <a href="#inspiration" data-i18n="nav.inspiration">Our inspiration</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button data-lang="en" aria-pressed="true">EN</button>
@@ -35,9 +36,10 @@
 <main id="top">
   <section class="hero" id="hero">
     <svg class="chakra" viewBox="-100 -100 200 200" aria-hidden="true">
-      <circle r="92" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle r="14" fill="none" stroke="currentColor" stroke-width="2"/>
-      <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" id="spokes"></g>
+      <circle class="disc" r="92"/>
+      <circle r="92" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <circle r="14" fill="none" stroke="currentColor" stroke-width="3.2"/>
+      <g stroke="currentColor" stroke-width="2.6" stroke-linecap="round" id="spokes"></g>
     </svg>
     <div class="wrap hero-grid">
       <div class="hero-copy">
@@ -83,7 +85,7 @@
 
   <section class="pin" id="vision">
     <div class="pin-art" aria-hidden="true">
-      <svg class="chakra big" viewBox="-100 -100 200 200"><circle r="92" fill="none" stroke="currentColor" stroke-width="1.4"/><circle r="12" fill="none" stroke="currentColor" stroke-width="1.4"/><g stroke="currentColor" stroke-width="1" id="spokes2"></g></svg>
+      <svg class="chakra big" viewBox="-100 -100 200 200"><circle r="92" fill="none" stroke="currentColor" stroke-width="2.4"/><circle r="12" fill="none" stroke="currentColor" stroke-width="2.4"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round" id="spokes2"></g></svg>
     </div>
     <div class="pin-card reveal">
       <div class="label"><span class="line"></span><span data-i18n="quote.eyebrow">A new chapter begins</span></div>
@@ -144,16 +146,25 @@
     </div>
   </section>
 
-  <section class="band mint" id="leaders">
-    <div class="wrap">
-      <div class="reveal">
-        <div class="label"><span class="line"></span><span data-i18n="leaders.eyebrow">Leadership</span></div>
-        <h2 class="display" data-rich data-i18n="leaders.title"></h2>
-      </div>
-      <div class="people">
-        <article class="person reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
-        <article class="person reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
-        <article class="person reveal"><div class="avatar" aria-hidden="true">👤</div><h3 data-i18n="leaders.name">Leader name</h3><p data-i18n="leaders.role">Role (to be added)</p></article>
+  <section class="band mint" id="inspiration">
+    <div class="wrap insp">
+      <figure class="ph insp-photo reveal">
+        <img src="assets/photos/visvesvaraya.jpg" alt="Early black-and-white photograph of Sir M. Visvesvaraya" loading="lazy" width="440" height="550">
+        <figcaption data-i18n="insp.cap">Sir M. Visvesvaraya, early photograph</figcaption>
+      </figure>
+      <div class="insp-copy reveal">
+        <div class="label"><span class="line"></span><span data-i18n="insp.eyebrow">Our inspiration</span></div>
+        <h2 class="display" data-rich data-i18n="insp.title"></h2>
+        <p class="script" data-i18n="insp.sub"></p>
+        <p class="lead" data-i18n="insp.p1"></p>
+        <ul class="facts">
+          <li data-i18n="insp.f1"></li>
+          <li data-i18n="insp.f2"></li>
+          <li data-i18n="insp.f3"></li>
+          <li data-i18n="insp.f4"></li>
+        </ul>
+        <p class="insp-rjp" data-i18n="insp.rjp"></p>
+        <p class="fine" data-i18n="insp.note"></p>
       </div>
     </div>
   </section>
@@ -199,8 +210,8 @@
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label><span data-i18n="f.name">Full name</span><input name="name" required autocomplete="name"></label>
         <div class="two">
-          <label><span data-i18n="f.phone">Phone number</span><input name="phone" type="tel" autocomplete="tel"></label>
-          <label><span data-i18n="f.email">Email</span><input name="email" type="email" autocomplete="email"></label>
+          <label><span data-i18n="f.phone">Phone number</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel"></label>
+          <label><span data-i18n="f.email">Email</span><input name="email" type="email" inputmode="email" autocomplete="email"></label>
         </div>
         <label><span data-i18n="f.place">Town / constituency</span><input name="place"></label>
         <label><span data-i18n="f.interest">How do you want to help?</span>

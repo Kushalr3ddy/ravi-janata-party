@@ -121,7 +121,7 @@
   });
 
   // stagger reveals inside grids
-  document.querySelectorAll(".tiles, .people, .pledges, .cmp, .mosaic").forEach(function (g) {
+  document.querySelectorAll(".tiles, .pledges, .cmp, .mosaic").forEach(function (g) {
     Array.prototype.forEach.call(g.querySelectorAll(".reveal"), function (el, i) { el.style.setProperty("--d", (i * 0.09) + "s"); });
   });
 

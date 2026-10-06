@@ -19,3 +19,4 @@ presented as such. Resized to 1400px wide.
 | rights-farmer.jpg | https://www.pexels.com/photo/indian-female-farmer-working-in-field-at-sunset-35635150/ |
 | corruption-handcuffs.jpg | https://www.pexels.com/photo/silver-handcuffs-on-top-of-bundled-paper-money-6266771/ |
 | corruption-rupees.jpg | https://www.pexels.com/photo/indian-rupees-in-hands-symbolizing-wealth-33813215/ |
+| visvesvaraya.jpg | https://commons.wikimedia.org/wiki/File:Vishveshvarayya_in_his_30%27s.jpg (public domain, c. 1890, unknown author) |

@@ -1,5 +1,6 @@
 :root {
   --saffron: #ff9933;
+  --chakra: #1b3a9e;         /* Ashoka-chakra blue */
   --saffron-d: #cf6500;      /* large accent text on white */
   --saffron-dd: #a84a00;     /* small accent text on white */
   --green: #138808;
@@ -24,13 +25,14 @@
 html { scroll-padding-top: 84px; overflow-x: clip; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
-body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); line-height: 1.65; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+body { -webkit-tap-highlight-color: transparent; margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); line-height: 1.65; overflow-x: clip; -webkit-font-smoothing: antialiased; }
 html[lang="kn"] { --display: "Noto Sans Kannada", "Anton", sans-serif; }
 img, svg { max-width: 100%; }
 a { color: inherit; }
 .wrap { width: min(1180px, 100% - 2 * var(--gut)); margin-inline: auto; }
 .narrow { width: min(900px, 100% - 2 * var(--gut)); }
 .center { text-align: center; }
+a, button, select, input { touch-action: manipulation; }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 .green :focus-visible, .green2 :focus-visible, .green3 :focus-visible, footer :focus-visible { outline-color: #fff; }
 
@@ -91,7 +93,9 @@ html[lang="kn"] .links a { letter-spacing: .02em; text-transform: none; font-siz
 /* ---------- hero ---------- */
 .hero { position: relative; min-height: calc(100vh - 80px); display: flex; align-items: center; padding: 70px 0 110px; overflow: hidden; isolation: isolate; background: linear-gradient(180deg, #ff9933 0%, #ffa44d 55%, #ffd2a3 100%); color: var(--ink); }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(520px circle at var(--mx, 75%) var(--my, 30%), rgba(255,255,255,.45), transparent 62%); }
-.chakra { position: absolute; left: 62%; top: 50%; width: min(860px, 100vw); color: rgba(255,255,255,.5); transform: translate(-50%, -50%); animation: spin 80s linear infinite; z-index: -1; }
+.chakra { position: absolute; left: 62%; top: 50%; width: min(860px, 100vw); color: var(--chakra); transform: translate(-50%, -50%); animation: spin 80s linear infinite; z-index: -1; }
+.hero .chakra circle:not(.disc), .hero .chakra g { stroke-opacity: .42; }
+.hero .chakra .disc { fill: #fff; fill-opacity: .38; stroke: none; }
 @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
 .mega { font-size: clamp(3rem, 7vw, 6.6rem); line-height: .98; text-transform: uppercase; letter-spacing: .005em; color: var(--ink); margin-bottom: 8px; }
@@ -162,7 +166,7 @@ html[lang="kn"] .counters span { letter-spacing: .02em; text-transform: none; fo
 /* pinned flag panel */
 .pin { position: relative; height: 190vh; background: linear-gradient(180deg, #ff9933 0%, #ffb866 22%, #ffffff 40% 60%, #5bb04f 80%, #138808 100%); }
 .pin-art { position: sticky; top: 0; height: 100vh; overflow: hidden; }
-.pin-art .chakra.big { left: 50%; top: 50%; width: min(1000px, 125vw); color: rgba(19,136,8,.8); animation: spin 90s linear infinite; }
+.pin-art .chakra.big { left: 50%; top: 50%; width: min(1000px, 125vw); color: var(--chakra); opacity: .85; animation: spin 90s linear infinite; }
 .pin-card { position: sticky; top: 14vh; margin: -86vh auto 0; width: min(580px, 100% - 2 * var(--gut)); background: var(--ink); color: #fff; padding: 46px 44px; text-align: center; box-shadow: 0 40px 80px rgba(0,0,0,.4); z-index: 2; }
 .pin-card .label { justify-content: center; color: var(--saffron); }
 .pin-card blockquote { font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.05; text-transform: uppercase; margin-bottom: 18px; }
@@ -211,13 +215,18 @@ html[lang="kn"] .cmp-h span { font-weight: 800; text-transform: none; font-size:
 .cmp i { font-style: normal; flex: none; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; font-size: .78rem; color: #fff; margin-top: 2px; }
 .cmp .x i { background: #a02335; } .cmp .v i { background: var(--green); }
 
-/* leaders */
-.people { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 48px; }
-.person { text-align: center; padding: 34px 20px; background: #fff; border-top: 6px solid var(--saffron); box-shadow: 0 10px 30px rgba(0,60,0,.1); }
-.avatar { width: 104px; height: 104px; border-radius: 50%; margin: 0 auto 16px; background: var(--tint); border: 3px solid var(--green); display: grid; place-items: center; font-size: 2.4rem; }
-.person h3 { font-size: 1.6rem; text-transform: uppercase; }
-html[lang="kn"] .person h3 { font-size: 1.2rem; text-transform: none; }
-.person p { margin: 4px 0 0; color: var(--ink-muted); font-size: .9rem; }
+/* inspiration */
+.insp { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
+.insp-photo { max-width: 380px; margin-inline: auto; transform: rotate(-2deg); }
+.insp-photo img { display: block; width: 100%; height: auto; filter: sepia(.18) contrast(1.04); }
+.insp-photo figcaption { font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); padding: 10px 2px 2px; }
+html[lang="kn"] .insp-photo figcaption { letter-spacing: 0; text-transform: none; font-size: .8rem; }
+.insp .script { color: var(--green-2); margin-top: 0; }
+.facts { list-style: none; margin: 22px 0; padding: 0; display: grid; gap: 12px; }
+.facts li { position: relative; padding-left: 30px; font-weight: 600; }
+.facts li::before { content: ""; position: absolute; left: 0; top: .5em; width: 14px; height: 14px; background: var(--saffron); border: 3px solid var(--green); border-radius: 50%; }
+.insp-rjp { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 2rem); text-transform: uppercase; line-height: 1.15; margin: 24px 0 0; color: var(--ink); }
+html[lang="kn"] .insp-rjp { font-weight: 800; text-transform: none; font-size: 1.2rem; line-height: 1.5; }
 
 /* pledges */
 .pledges { list-style: none; counter-reset: p; padding: 0; margin: 48px 0 0; border-top: 2px solid #fff; }
@@ -278,7 +287,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space
   .notice-in { grid-template-columns: 1fr; }
   .notice-label { place-items: center start; padding: 18px 0 6px; border-right: 0; }
   .notice a { border-right: 0; border-top: 1px solid var(--line); padding: 20px 40px 20px 0; }
-  .video-grid, .two { grid-template-columns: 1fr; }
+  .video-grid, .two, .insp { grid-template-columns: 1fr; }
+  .insp { gap: 36px; }
   .tiles { grid-template-columns: 1fr; }
   .tile, .tile:nth-child(n+4) { grid-column: auto; }
   .mosaic { grid-template-columns: 1fr; gap: 36px; }
@@ -290,4 +300,55 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space
   .cmp-r { grid-template-columns: 1fr; }
   .cmp .x { border-right: 0; padding-bottom: 6px; }
   .pin-card { padding: 34px 24px; }
+}
+
+/* ---------- phone polish ---------- */
+@supports (height: 100svh) {
+  .hero { min-height: calc(100svh - 80px); }
+  .pin { height: 190svh; }
+  .pin-art { height: 100svh; }
+  .pin-card { top: 14svh; margin-top: -86svh; }
+}
+@media (max-width: 1100px) {
+  .lang button { padding: 0 14px; min-height: 44px; font-size: .78rem; }
+  .menu-btn { min-width: 44px; min-height: 44px; }
+  .links a { padding: 6px 0; font-size: .8rem; }
+}
+@media (max-width: 900px) {
+  .wrap { width: calc(100% - 2 * var(--gut)); }
+  .pledges li { gap: 14px; padding: 20px 4px; }
+  .pledges li::before { min-width: 40px; font-size: 1.8rem; }
+  .insp .script { line-height: 1.35; }
+  .display { overflow-wrap: anywhere; }
+  .btn { padding: 15px 18px; }
+  .cta-row .btn { flex: 1 1 100%; justify-content: space-between; }
+  .pin-card .btn { width: 100%; justify-content: space-between; }
+  form .btn { justify-self: stretch; justify-content: space-between; }
+  .notice a { padding-block: 22px; }
+}
+@media (max-width: 380px) {
+  .brand span { font-size: 1.05rem; }
+  .brand img { width: 36px; height: 36px; }
+  .nav { gap: 8px; }
+  .mega { font-size: clamp(2.6rem, 14vw, 3.4rem); }
+}
+
+/* header + wheel tuning for narrow phones */
+.brand { min-height: 44px; min-width: 0; flex: 0 1 auto; }
+.brand span { overflow: hidden; text-overflow: ellipsis; }
+.lang, .menu-btn { flex: none; }
+.fine a { display: inline-block; padding: 10px 0; }
+@media (max-width: 900px) {
+  .hero .chakra { top: 66%; }
+  .hero .chakra circle:not(.disc), .hero .chakra g { stroke-opacity: .3; }
+  .hero .chakra .disc { fill-opacity: .3; }
+  .lang button { padding: 0 11px; }
+  .brand span { font-size: 1rem; }
+}
+@media (max-width: 420px) {
+  .brand span { font-size: .92rem; }
+  .brand { gap: 7px; }
+  .lang button { padding: 0 9px; font-size: .74rem; }
+  .menu-btn { min-width: 40px; }
+  .nav { gap: 6px; }
 }
