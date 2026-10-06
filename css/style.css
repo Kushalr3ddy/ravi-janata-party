@@ -140,6 +140,10 @@ html[lang="kn"] .notice small, html[lang="kn"] .notice-label { letter-spacing: .
 .band.white { background: #fff; }
 .band.tint { background: var(--tint); }
 .band.mint { background: var(--mint); }
+.band.wash { background: linear-gradient(180deg, #ffffff 0%, #f1faef 55%, #e3f4e0 100%); }
+.band.mint1 { background: #d9efd5; }
+.band.mint2 { background: #bfe3b9; }
+.band.mint3 { background: #9fd697; }
 .band.green { background: var(--green); color: #fff; }
 .band.green2 { background: var(--green-2); color: #fff; }
 .band.green3 { background: var(--green-3); color: #fff; }
@@ -164,8 +168,8 @@ html[lang="kn"] .counters b { font-weight: 800; }
 html[lang="kn"] .counters span { letter-spacing: .02em; text-transform: none; font-size: .82rem; }
 
 /* pinned flag panel */
-.pin { position: relative; height: 190vh; background: linear-gradient(180deg, #ff9933 0%, #ffb866 22%, #ffffff 40% 60%, #5bb04f 80%, #138808 100%); }
-.pin-art { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.pin { position: relative; height: 150vh; background: #fff; }
+.pin-art { position: sticky; top: 0; height: 100vh; overflow: hidden; background: linear-gradient(180deg, #ff9933 0%, #ffffff 50%, #138808 100%); background-size: 100% 200%; background-position: 0 calc(var(--p, 0) * 100%); }
 .pin-art .chakra.big { left: 50%; top: 50%; width: min(1000px, 125vw); color: var(--chakra); opacity: .85; animation: spin 90s linear infinite; }
 .pin-card { position: sticky; top: 14vh; margin: -86vh auto 0; width: min(580px, 100% - 2 * var(--gut)); background: var(--ink); color: #fff; padding: 46px 44px; text-align: center; box-shadow: 0 40px 80px rgba(0,0,0,.4); z-index: 2; }
 .pin-card .label { justify-content: center; color: var(--saffron); }
@@ -305,7 +309,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space
 /* ---------- phone polish ---------- */
 @supports (height: 100svh) {
   .hero { min-height: calc(100svh - 80px); }
-  .pin { height: 190svh; }
+  .pin { height: 150svh; }
   .pin-art { height: 100svh; }
   .pin-card { top: 14svh; margin-top: -86svh; }
 }
@@ -351,4 +355,26 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space
   .lang button { padding: 0 9px; font-size: .74rem; }
   .menu-btn { min-width: 40px; }
   .nav { gap: 6px; }
+}
+
+/* shorter orange stretch + earlier green on phones */
+@media (max-width: 900px) {
+  .hero { min-height: 0; padding: 32px 0 56px; }
+  .scroll-cue { display: none; }
+  .collage { height: clamp(360px, 92vw, 500px); margin-top: 4px; }
+  .band { padding: clamp(52px, 12vw, 80px) 0; }
+  .pin { height: 135vh; }
+  .statement { font-size: clamp(1.5rem, 6.4vw, 2.2rem); }
+  .counters { margin-top: 48px; }
+}
+@supports (height: 100svh) { @media (max-width: 900px) { .pin { height: 135svh; } } }
+
+@media (max-width: 900px) {
+  .tiles { gap: 30px; margin-top: 36px; }
+  .tile-img, .tile:nth-child(n+4) .tile-img { aspect-ratio: 3/2; }
+  .tile-img { margin-bottom: 12px; }
+  .mosaic { gap: 22px; margin-top: 32px; }
+  .mosaic .ph img { max-height: 380px; object-fit: cover; }
+  .cmp { margin-top: 32px; }
+  .insp { gap: 28px; }
 }

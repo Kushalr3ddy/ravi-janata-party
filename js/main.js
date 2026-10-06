@@ -100,12 +100,22 @@
   });
   links.addEventListener("click", function () { links.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
 
+  // flag panel: background goes orange -> white -> green as you scroll through it
+  var pin = document.getElementById("vision");
+  function pinProgress() {
+    if (!pin) return;
+    var r = pin.getBoundingClientRect(), total = r.height - window.innerHeight;
+    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    pin.style.setProperty("--p", p.toFixed(3));
+  }
+
   // header solid + progress bar + word lighting
   var hdr = document.getElementById("hdr"), bar = document.getElementById("progress");
   function onScroll() {
     var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
     bar.style.transform = "scaleX(" + (max > 0 ? h.scrollTop / max : 0) + ")";
     hdr.classList.toggle("solid", h.scrollTop > 40);
+    pinProgress();
     lightWords();
   }
   window.addEventListener("scroll", onScroll, { passive: true });
