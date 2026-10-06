@@ -103,6 +103,14 @@ window.I18N = {
     "quote.eyebrow": "A new chapter begins",
     "cmp.k": "Compare",
     "scroll": "Scroll",
+    "people.eyebrow": "Real people. Real India.",
+    "people.title": "Built for *every* Indian.",
+    "people.text": "Students, shopkeepers, tailors, farmers, young innovators: RJP is for everyone who builds this country.",
+    "pc1": "Students",
+    "pc2": "Small business",
+    "pc3": "Shopkeepers",
+    "photo.credit": "Photos: Pexels (free licence). Illustrative stock images; the people shown are not RJP members or supporters.",
+    "act": "Act",
     "footer.text": "© 2026 Ravi Janata Party. All rights reserved."
   },
   kn: {
@@ -207,6 +215,14 @@ window.I18N = {
     "quote.eyebrow": "ಹೊಸ ಅಧ್ಯಾಯ ಆರಂಭ",
     "cmp.k": "ಹೋಲಿಕೆ",
     "scroll": "ಸ್ಕ್ರಾಲ್",
+    "people.eyebrow": "ನಿಜವಾದ ಜನ. ನಿಜವಾದ ಭಾರತ.",
+    "people.title": "*ಪ್ರತಿಯೊಬ್ಬ* ಭಾರತೀಯನಿಗಾಗಿ.",
+    "people.text": "ವಿದ್ಯಾರ್ಥಿಗಳು, ಅಂಗಡಿಯವರು, ಟೈಲರ್‌ಗಳು, ರೈತರು, ಯುವ ನವೋದ್ಯಮಿಗಳು: ಈ ದೇಶವನ್ನು ಕಟ್ಟುವ ಎಲ್ಲರಿಗಾಗಿ RJP.",
+    "pc1": "ವಿದ್ಯಾರ್ಥಿಗಳು",
+    "pc2": "ಸಣ್ಣ ವ್ಯವಹಾರ",
+    "pc3": "ಅಂಗಡಿಯವರು",
+    "photo.credit": "ಚಿತ್ರಗಳು: Pexels (ಉಚಿತ ಪರವಾನಗಿ). ಇವು ಉದಾಹರಣೆಯ ಸ್ಟಾಕ್ ಚಿತ್ರಗಳು; ಚಿತ್ರದಲ್ಲಿರುವವರು RJP ಸದಸ್ಯರು ಅಥವಾ ಬೆಂಬಲಿಗರಲ್ಲ.",
+    "act": "ಕ್ರಿಯೆ",
     "footer.text": "© 2026 ರವಿ ಜನತಾ ಪಾರ್ಟಿ. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
   }
 };
