@@ -572,3 +572,6 @@ html[lang="kn"] .slogans li { font-family: var(--sans); font-weight: 800; text-t
 
 /* the logo already says RJP; show the full name next to it only on very wide screens */
 @media (max-width: 1360px) { header .brand span { display: none; } }
+
+/* party name above the hero eyebrow */
+.party-name{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(26px,4.2vw,44px);line-height:1.05;color:var(--ink);margin:0 0 14px}
