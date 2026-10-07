@@ -575,3 +575,9 @@ html[lang="kn"] .slogans li { font-family: var(--sans); font-weight: 800; text-t
 
 /* party name above the hero eyebrow */
 .party-name{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(26px,4.2vw,44px);line-height:1.05;color:var(--ink);margin:0 0 14px}
+
+/* contact details */
+.contact{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;margin:0;font-size:.95rem}
+.contact b{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.contact a{color:inherit;text-decoration:underline;text-underline-offset:3px;padding:6px 0}
+.page-hero .contact{margin-top:18px;color:var(--ink)}
