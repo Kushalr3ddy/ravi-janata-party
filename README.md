@@ -4,7 +4,7 @@ Static site (HTML/CSS/JS, no build). English by default with a Kannada toggle.
 
 ## Run locally
 ```
-python3 -m http.server 8000
+python3 tools/serve.py 8000
 ```
 Open http://localhost:8000
 
