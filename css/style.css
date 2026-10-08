@@ -581,3 +581,8 @@ html[lang="kn"] .slogans li { font-family: var(--sans); font-weight: 800; text-t
 .contact b{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
 .contact a{color:inherit;text-decoration:underline;text-underline-offset:3px;padding:6px 0}
 .page-hero .contact{margin-top:18px;color:var(--ink)}
+
+/* donate */
+.don-methods{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:22px}
+.don-methods em{font-style:normal;background:var(--saffron);color:var(--ink);padding:6px 12px;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.band .cta-band .contact,.prose .contact{margin-top:18px}

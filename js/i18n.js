@@ -461,7 +461,20 @@ window.I18N = {
     "pi9.b3": "Responsible defence exports to friendly nations",
     "contact.t": "Contact us",
     "contact.email": "Email",
-    "contact.phone": "Phone"
+    "contact.phone": "Phone",
+    "doc.title.donate": "Donate | Ravi Janatha Party",
+    "nav.donate": "Donate",
+    "don.eyebrow": "Donate",
+    "don.title": "Fund the *change*.",
+    "don.lead": "Donations will open soon. Every rupee will be accounted for in public.",
+    "don.ways.e": "How to give",
+    "don.ways.t": "Donations *open soon*",
+    "don.ways.d": "UPI and bank transfer details will be published on this page before we start accepting donations. Until then, write or call us and we will tell you as soon as they are ready.",
+    "don.badge": "Coming soon",
+    "don.cta": "Donate",
+    "dh.e": "Support RJP",
+    "dh.t": "Every rupee will *count*.",
+    "dh.d": "Small gifts from ordinary people will power this movement, and every rupee will be reported in public."
   },
   kn: {
     "nav.why": "ಏಕೆ RJP",
@@ -923,6 +936,19 @@ window.I18N = {
     "pi9.b3": "ಸ್ನೇಹಿ ದೇಶಗಳಿಗೆ ಜವಾಬ್ದಾರಿಯುತ ರಕ್ಷಣಾ ರಫ್ತು",
     "contact.t": "ಸಂಪರ್ಕಿಸಿ",
     "contact.email": "ಇಮೇಲ್",
-    "contact.phone": "ಫೋನ್"
+    "contact.phone": "ಫೋನ್",
+    "doc.title.donate": "ದೇಣಿಗೆ | ರವಿ ಜನತಾ ಪಾರ್ಟಿ",
+    "nav.donate": "ದೇಣಿಗೆ",
+    "don.eyebrow": "ದೇಣಿಗೆ",
+    "don.title": "ಬದಲಾವಣೆಗೆ *ಬೆಂಬಲ* ನೀಡಿ.",
+    "don.lead": "ದೇಣಿಗೆ ಶೀಘ್ರದಲ್ಲೇ ಆರಂಭವಾಗುತ್ತದೆ. ಪ್ರತಿ ರೂಪಾಯಿಯ ಲೆಕ್ಕ ಸಾರ್ವಜನಿಕವಾಗಿ ಇರುತ್ತದೆ.",
+    "don.ways.e": "ಹೇಗೆ ನೀಡುವುದು",
+    "don.ways.t": "ದೇಣಿಗೆ *ಶೀಘ್ರದಲ್ಲೇ* ಆರಂಭ",
+    "don.ways.d": "ನಾವು ದೇಣಿಗೆ ಸ್ವೀಕರಿಸುವ ಮೊದಲು UPI ಮತ್ತು ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ ವಿವರಗಳನ್ನು ಈ ಪುಟದಲ್ಲಿ ಪ್ರಕಟಿಸಲಾಗುವುದು. ಅಲ್ಲಿಯವರೆಗೆ ನಮಗೆ ಬರೆಯಿರಿ ಅಥವಾ ಕರೆ ಮಾಡಿ; ಸಿದ್ಧವಾದ ತಕ್ಷಣ ತಿಳಿಸುತ್ತೇವೆ.",
+    "don.badge": "ಶೀಘ್ರದಲ್ಲೇ",
+    "don.cta": "ದೇಣಿಗೆ ನೀಡಿ",
+    "dh.e": "RJP ಅನ್ನು ಬೆಂಬಲಿಸಿ",
+    "dh.t": "ಪ್ರತಿ ರೂಪಾಯಿಯೂ *ಲೆಕ್ಕಕ್ಕೆ* ಬರುತ್ತದೆ.",
+    "dh.d": "ಸಾಮಾನ್ಯ ಜನರ ಸಣ್ಣ ದೇಣಿಗೆಗಳು ಈ ಚಳವಳಿಗೆ ಶಕ್ತಿ ನೀಡುತ್ತವೆ; ಪ್ರತಿ ರೂಪಾಯಿಯನ್ನೂ ಸಾರ್ವಜನಿಕವಾಗಿ ವರದಿ ಮಾಡಲಾಗುವುದು."
   }
 };
